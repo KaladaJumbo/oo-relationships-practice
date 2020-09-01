@@ -1,6 +1,7 @@
 # create files for your ruby classes in this directory
 require_relative './ingredient'
 require_relative './desert.rb'
+require 'pry'
 
 class Bakery
 
@@ -36,12 +37,22 @@ class Bakery
 
         self.deserts.each do |int_desert|
 
-            intgredients_arr << int_desert.ingredients
-            #an array of an array of ingredients
+            int_desert.ingredients.each do |int_ing|
+
+                ingredients_arr << int_ing
+
+            end
+            
 
         end
 
         return ingredients_arr
+
+    end
+
+    def add_desert(desert)
+
+        desert.bakery_sold(self)
 
     end
 

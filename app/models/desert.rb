@@ -3,13 +3,14 @@ require_relative './ingredient'
 
 class Desert
 
-    attr_accessor :name, :bakery
+    attr_accessor :name, :bakery, :ingredient_arr
     @@all = []
 
-    def intialize (name)
+    def initialize (name)
 
         @name = name
-        @@all << self 
+        @ingredient_arr = [] 
+        @@all << self
 
     end
 
@@ -23,7 +24,7 @@ class Desert
 
         Ingredient.all.select do |int_ingredient|
 
-            int_ingredient.desert == self
+            int_ingredient.desert.include?(self)
 
         end
 
@@ -46,6 +47,12 @@ class Desert
         end
 
         return total_cal
+
+    end
+
+    def add_ingredient(ingredient)
+
+        ingredient.desert << self
 
     end
 

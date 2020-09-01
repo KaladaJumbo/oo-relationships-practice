@@ -3,7 +3,7 @@ require_relative './file.rb'
 
 class Ingredient
 
-    attr_accessor :name, :calorie
+    attr_accessor :name, :calorie, :desert
     @@all = []
 
     def initialize(name, calorie) 
@@ -11,6 +11,7 @@ class Ingredient
         @name = name 
         @calorie = calorie
         @@all << self 
+        @desert = []
 
     end
 
@@ -40,6 +41,7 @@ class Ingredient
 
 
     end
+
 
 end
 
