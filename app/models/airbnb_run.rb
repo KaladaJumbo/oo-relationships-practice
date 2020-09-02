@@ -54,7 +54,8 @@ puts "pro_travellers"
 Guest.pro_traveller.each {|int_guest| puts "#{int_guest} --- #{int_guest.name}"}
 puts "finding all by name 'ka'"
 Guest.find_by_name("ka").each {|int_guest| 
-    puts "#{int_guest} --- #{int_guest.name} -- and they have gone to(listing): \n#{int_guest.listings}"
+    puts "#{int_guest} --- #{int_guest.name} -- and they have gone to(listing): \n
+    #{int_guest.listings}"
 }
 
 ####################### guest class ########################
