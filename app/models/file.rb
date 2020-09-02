@@ -1,7 +1,7 @@
 # create files for your ruby classes in this directory
 require_relative './ingredient'
 require_relative './desert.rb'
-require 'pry'
+
 
 class Bakery
 
